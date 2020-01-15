@@ -5,20 +5,19 @@ const connect = function() {
     host: '172.46.2.204',
     port: 50541
   });
-
   conn.on('data', (data) => {
     console.log('Server says: ', data);
   });
-
   conn.on('connect', () => {
-    conn.write('Hello from client!');
+    conn.write('Hello there!')
+    console.log('New client connected!');
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
   return conn;
-}
-// console.log('Connecting ...');
-// connect();
+};
+console.log('Connecting ...');
+connect();
 
-module.exports ={ connect };
+module.exports = { connect };
