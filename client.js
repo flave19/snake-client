@@ -9,18 +9,19 @@ const connect = function() {
     console.log('Server says: ', data);
   });
   conn.on('connect', () => {
-    conn.write('Hello there!')
+    // conn.write('Hello there!')
     console.log('New client connected!');
-  });
-  conn.on('connect', () => {
     conn.write('Name: fla')
+    conn.write('Move: up')
   });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
   return conn;
 };
-console.log('Connecting ...');
-connect();
+// console.log('Connecting ...');
+// connect();
 
 module.exports = { connect };
+
+
