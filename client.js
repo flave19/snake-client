@@ -12,6 +12,9 @@ const connect = function() {
     conn.write('Hello there!')
     console.log('New client connected!');
   });
+  conn.on('connect', () => {
+    conn.write('Name: fla')
+  });
   // interpret incoming data as text
   conn.setEncoding('utf8'); 
 
