@@ -1,0 +1,3 @@
+const titleCase  = function(text) {
+  // Your code in here ...
+};
